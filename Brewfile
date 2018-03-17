@@ -27,6 +27,9 @@ brew 'wget'
 brew 'yarn'
 brew 'youtube-dl'
 
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+
 cask '1password'
 # cask 'firefox'
 cask 'google-chrome'
