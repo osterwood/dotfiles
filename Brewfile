@@ -29,8 +29,11 @@ brew 'youtube-dl'
 
 brew 'pyenv'
 brew 'pyenv-virtualenv'
+brew 'qemu'
+brew 'gdb', args: ["with-python"]
 
 # cask 'firefox'
+cask 'gcc-arm-embedded'
 cask 'google-chrome'
 # cask 'handbrake'
 cask 'macdown'
