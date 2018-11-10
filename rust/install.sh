@@ -24,6 +24,6 @@ packages=(
 ~/.cargo/bin/rustup component add "${packages[@]}"
 ~/.cargo/bin/rustup target add thumbv6m-none-eabi thumbv7m-none-eabi thumbv7em-none-eabi thumbv7em-none-eabihf
 ~/.cargo/bin/cargo install cargo-binutils cargo-generate
-
+~/.cargo/bin/cargo install bobbin-cli --features stlink
 # mkdir '~/.zfunc'
 # rustup completions zsh > '~/.zfunc/_rustup'
