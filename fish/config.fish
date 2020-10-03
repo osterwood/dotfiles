@@ -17,7 +17,7 @@ set -x -g PATH (brew --prefix findutils)/libexec/gnubin $PATH
 # set -x -g PATH ~/go/bin $PATH
 
 # User bin folder
-set -x -g PATH ~/bin ~/.local/bin $PATH /usr/local/sbin
+set -x -g PATH ~/bin ~/.local/bin ~/Library/Python/3.7/bin $PATH /usr/local/sbin
 
 # Composer
 # set -x -g PATH ~/.composer/vendor/bin $PATH
