@@ -27,3 +27,7 @@ set -x -g PATH ~/bin ~/.local/bin ~/Library/Python/3.7/bin $PATH /usr/local/sbin
 # fnm env --multi | source
 
 set fish_greeting
+
+if test -e ~/.localrc
+  . ~/.localrc
+end
