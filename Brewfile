@@ -5,6 +5,8 @@ tap 'puma/puma'
 
 brew 'ack'
 brew 'coreutils'
+brew 'findutils'
+brew 'fish'
 brew 'go'
 brew 'grc'
 brew 'imagemagick'
