@@ -28,6 +28,10 @@ set -x -g PATH ~/bin ~/.local/bin ~/.cargo/bin ~/Library/Python/3.7/bin $PATH /u
 
 set fish_greeting
 
+set -g fish_user_paths "(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc" $fish_user_paths
+set -gx  LC_ALL en_US.UTF-8 
+set -gx  LANG en_US.UTF-8 
+
 if test -e ~/.localrc
   . ~/.localrc
 end
