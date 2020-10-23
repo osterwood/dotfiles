@@ -19,6 +19,15 @@ set -x -g PATH (brew --prefix findutils)/libexec/gnubin $PATH
 # User bin folder
 set -x -g PATH ~/bin ~/.local/bin ~/.cargo/bin ~/Library/Python/3.7/bin $PATH /usr/local/sbin
 
+if test -e ~/anaconda3/
+	set -x -g PATH ~/anaconda3/bin $PATH
+
+	# >>> conda initialize >>>
+	# !! Contents within this block are managed by 'conda init' !!
+	eval /Users/chris/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+	# <<< conda initialize <<<
+end
+
 # Composer
 # set -x -g PATH ~/.composer/vendor/bin $PATH
 
@@ -31,6 +40,8 @@ set fish_greeting
 set -g fish_user_paths "(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc" $fish_user_paths
 set -gx  LC_ALL en_US.UTF-8 
 set -gx  LANG en_US.UTF-8 
+
+set fish_prompt_pwd_dir_length 40
 
 if test -e ~/.localrc
   . ~/.localrc
