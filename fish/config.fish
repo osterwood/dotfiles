@@ -19,7 +19,7 @@ if test -e ~/anaconda3/
 
 	# >>> conda initialize >>>
 	# !! Contents within this block are managed by 'conda init' !!
-	eval /Users/chris/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+	eval ~/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 	# <<< conda initialize <<<
 end
 
