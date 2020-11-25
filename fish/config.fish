@@ -32,7 +32,9 @@ end
 
 set fish_greeting
 
-set -g fish_user_paths /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc $fish_user_paths
+set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+
 set -gx  LC_ALL en_US.UTF-8 
 set -gx  LANG en_US.UTF-8 
 
