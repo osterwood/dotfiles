@@ -23,6 +23,11 @@ if test -e ~/anaconda3/
 	# <<< conda initialize <<<
 end
 
+if test -e /Library/Frameworks/Mono.framework/Versions/Current/Commands
+  set -x -g PATH $PATH /Library/Frameworks/Mono.framework/Versions/Current/Commands
+  alias renode="mono /Applications/Renode.app/Contents/MacOS/bin/Renode.exe"
+end
+
 # Composer
 # set -x -g PATH ~/.composer/vendor/bin $PATH
 
