@@ -5,7 +5,7 @@ set -x -g TERM "xterm-256color"
 # set -x -g PATH ~/go/bin $PATH
 
 set default_path /usr/bin /usr/sbin /bin /sbin
-set homebrew /usr/local/bin /usr/local/sbin
+set homebrew /opt/homebrew/bin /opt/homebrew/sbin
 set rbenv_path ~/.rbenv/shims
 set local_path ~/bin ~/.local/bin ~/.cargo/bin
 set python_path ~/Library/Python/3.7/bin
@@ -13,6 +13,7 @@ set python_path ~/Library/Python/3.7/bin
 set -x -g PATH $homebrew $rbenv_path $local_path $python_path $default_path
 
 # status --is-interactive; and source (rbenv init -|psub)
+status is-interactive; and pyenv init --path | source
 
 if test -e ~/anaconda3/
 	set -x -g PATH ~/anaconda3/bin $PATH
@@ -37,8 +38,8 @@ end
 
 set fish_greeting
 
-set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+# set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
+# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
 set -gx  LC_ALL en_US.UTF-8 
 set -gx  LANG en_US.UTF-8 
