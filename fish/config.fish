@@ -5,14 +5,19 @@ set -x -g TERM "xterm-256color"
 # set -x -g PATH ~/go/bin $PATH
 
 set default_path /usr/bin /usr/sbin /bin /sbin
-set homebrew /opt/homebrew/bin /opt/homebrew/sbin
+
+if test -e /opt/homebrew
+	set homebrew /opt/homebrew/bin /opt/homebrew/sbin
+else
+	set homebrew /usr/local/bin /usr/local/sbin
+end
+
 set rbenv_path ~/.rbenv/shims
 set local_path ~/bin ~/.local/bin ~/.cargo/bin
 set python_path ~/Library/Python/3.7/bin
 
 set -x -g PATH $homebrew $rbenv_path $local_path $python_path $default_path
 
-# status --is-interactive; and source (rbenv init -|psub)
 status is-interactive; and pyenv init --path | source
 
 if test -e ~/anaconda3/
