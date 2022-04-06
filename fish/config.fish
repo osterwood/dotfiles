@@ -1,9 +1,6 @@
 set -x -g LS_COLORS "di=38;5;27:fi=38;5;7:ln=38;5;51:pi=40;38;5;11:so=38;5;13:or=38;5;197:mi=38;5;161:ex=38;5;9:"
 set -x -g TERM "xterm-256color"
 
-# go bin folder
-# set -x -g PATH ~/go/bin $PATH
-
 set default_path /usr/bin /usr/sbin /bin /sbin
 
 if test -e /opt/homebrew
@@ -12,13 +9,8 @@ else
 	set homebrew /usr/local/bin /usr/local/sbin
 end
 
-set rbenv_path ~/.rbenv/shims
 set local_path ~/bin ~/.local/bin ~/.cargo/bin
-set python_path ~/Library/Python/3.7/bin
-
-set -x -g PATH $homebrew $rbenv_path $local_path $python_path $default_path
-
-status is-interactive; and pyenv init --path | source
+set -x -g PATH $homebrew $local_path $default_path
 
 if test -e ~/anaconda3/
 	set -x -g PATH ~/anaconda3/bin $PATH
@@ -34,20 +26,13 @@ if test -e /Library/Frameworks/Mono.framework/Versions/Current/Commands
   alias renode="mono /Applications/Renode.app/Contents/MacOS/bin/Renode.exe"
 end
 
-# Composer
-# set -x -g PATH ~/.composer/vendor/bin $PATH
-
-# fnm
-# set -x -g PATH /home/rosco/.fnm $PATH
-# fnm env --multi | source
-
 set fish_greeting
 
 # set -g -x "CLOUDSDK_PYTHON" "/usr/local/opt/python@3.8/libexec/bin/python"
 # source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
-if test -e ~/.asdf/
-	source ~/.asdf/asdf.fish
+if test -e /opt/homebrew/opt/asdf/libexec/asdf.fish
+  source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 
 set -gx  LC_ALL en_US.UTF-8 
